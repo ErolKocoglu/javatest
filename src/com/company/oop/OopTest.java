@@ -46,6 +46,8 @@ public class OopTest {
         geometry.readRectangleFromConsole();
         geometry.calculateAreaOfRectangle();
         geometry.calculateCircumferenceOfRectangle();
+        System.out.println("My first git test");
+
     }
 
 
