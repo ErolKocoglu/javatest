@@ -40,9 +40,11 @@ public class OopTest {
         geometry.readRadiusFromConsole();
         geometry.calculateAreaOfCircle();
         geometry.calculateCircumferenceOfCircle();
+
         geometry.readEdgeLengthFromConsole();
         geometry.calculateAreaOfSquare();
         geometry.calculateCircumferenceOfSquare();
+
         geometry.readRectangleFromConsole();
         geometry.calculateAreaOfRectangle();
         geometry.calculateCircumferenceOfRectangle();
