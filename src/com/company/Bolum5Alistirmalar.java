@@ -134,6 +134,28 @@ public class Bolum5Alistirmalar {
             }
         }
 
+        //Çözüm 11
+        int uretilenSayi= (int)(Math.random()*99 +1);
+        int denemeSayisi=0;
+        int tahmin = -1;
+        while(tahmin!=uretilenSayi){
+            System.out.println("Tahmininizi girin");
+            tahmin=tara.nextInt();
+            denemeSayisi++;
+            if(tahmin==uretilenSayi){
+                System.out.println("Tebrikler " +denemeSayisi +". seferde doğru bildiniz.");
+            }else if(tahmin>uretilenSayi){
+                System.out.println("Yüksek girdiniz düşürün");
+            }else{
+                System.out.println("Düşük girdiniz yükseltin");
+            }
+
+        }
+
+
+
+
+
 
 
 
