@@ -3,12 +3,20 @@ package com.company;
 import java.util.Scanner;
 
 public class School {
-    public String name;
-    public String address;
-    public String manager;
-    public Clazz[] classes;
-    public Student[] students;
-    public Teacher[] teachers;
+    private String name;
+    private String address;
+    private String manager;
+    private Clazz[] classes;
+    private Student[] students;
+    private Teacher[] teachers;
+
+    //setter getter
+
+
+
+
+
+
 
 
     public void readSchoolValuesFromConsole(){
@@ -58,5 +66,6 @@ public class School {
         students = ogrenciler;
 
     }
+
 
 }

@@ -14,15 +14,17 @@ public class Geometry {
         for(int c=0; c<countOfCircle;c++){
             System.out.println((c+1) +". Dairenin yarıçapını girin");
             int radius=tara.nextInt();
+
             circles[c]=new Circle(radius);
         }
         this.circles=circles;
     }
+
     public void calculateAreaOfCircle(){
         System.out.println("Girdiğiniz dairelerin alanları:");
         Double[] areas= new Double[circles.length];
         for(int cA=0; cA<circles.length; cA++){
-            double area= 3.14*(circles[cA].radius*circles[cA].radius);
+            double area= 3.14*(circles[cA].getRadius()*circles[cA].getRadius());
             areas[cA]=area;
             System.out.println((cA+1) +"." +"Dairenin alanı: " +areas[cA]);
         }
@@ -33,7 +35,7 @@ public class Geometry {
         System.out.println("Girdiğiniz dairelerin çevreleri:");
         Double[] circumferences=new Double[circles.length];
         for(int cCirc=0; cCirc<circles.length; cCirc++){
-            double circumference= 2*3.14*circles[cCirc].radius;
+            double circumference= 2*3.14*circles[cCirc].getRadius();
             circumferences[cCirc]=circumference;
             System.out.println((cCirc+1) +". Dairenin çevresi: " +circumferences[cCirc]);
         }
