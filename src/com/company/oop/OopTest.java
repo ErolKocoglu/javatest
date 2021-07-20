@@ -10,23 +10,23 @@ import java.util.Scanner;
 
 public class OopTest {
     public static void main(String[] args) {
-        JFrame myObj = new JFrame();
-        myObj.setVisible(true);
-        myObj.setSize(100,200);
-
-        myObj.setTitle("First Frame");
-
-        JFrame secondFrame= new JFrame();
-        secondFrame.setVisible(true);
-        secondFrame.setLocation(500,300);
-        secondFrame.setSize(800,800);
-        secondFrame.setTitle("Second Frame");
-
-        myObj.getContentPane().setBackground(Color.BLUE);
-        Scanner tara = new Scanner(System.in);
-        System.out.println("First frame gir");
-        String firstFrame=tara.nextLine();
-        myObj.setTitle(firstFrame);
+//        JFrame myObj = new JFrame();
+//        myObj.setVisible(true);
+//        myObj.setSize(100, 200);
+//
+//        myObj.setTitle("First Frame");
+//
+//        JFrame secondFrame = new JFrame();
+//        secondFrame.setVisible(true);
+//        secondFrame.setLocation(500, 300);
+//        secondFrame.setSize(800, 800);
+//        secondFrame.setTitle("Second Frame");
+//
+//        myObj.getContentPane().setBackground(Color.BLUE);
+//        Scanner tara = new Scanner(System.in);
+//        System.out.println("First frame gir");
+//        String firstFrame = tara.nextLine();
+//        myObj.setTitle(firstFrame);
 //        String myEmail="      mustafa@hotmail.com";
 //        String yourEmail="mustafa1@hotmail.com";
 //        System.out.println(yourEmail.hashCode());
@@ -72,35 +72,24 @@ public class OopTest {
 //        geometry.calculateAreaOfRectangle();
 //        geometry.calculateCircumferenceOfRectangle();
 //        System.out.println("My first git test");
-        try{
-            File myFile= new File("C:\\Users\\HP\\IdeaProjects\\untitled2\\src\\com\\company\\oop\\deneme.txt");
-            Scanner myReader= new Scanner(myFile);
-            OopTest newObject=new OopTest();
-            while(myReader.hasNextLine()){
-                String email=myReader.nextLine();
+        try {
+            File myFile = new File("C:\\Users\\HP\\IdeaProjects\\untitled2\\src\\com\\company\\oop\\deneme.txt");
+            Scanner myReader = new Scanner(myFile);
+            EmailChecker newObject=new EmailChecker();
+            while (myReader.hasNextLine()) {
+                String email = myReader.nextLine();
                 System.out.println(email +newObject.isValid(email));
+
 
 
             }
             myReader.close();
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("Hata meydana geldi");
             e.printStackTrace();
         }
 
 
-
-
-    }
-
-    public boolean isValid(String email){
-        boolean valid;
-        if(email.contains("@")==true&&email.substring(0,email.indexOf("@")).isEmpty()==false&&email.substring(email.indexOf("@")).contains(".")==true&&email.substring(email.indexOf("@"),email.indexOf(".")).isEmpty()==false&&email.substring(email.indexOf("."),email.indexOf(".",email.indexOf(".")+1)).isEmpty()==false){
-            valid=true;
-        }else{
-            valid=false;
-        }
-        return valid;
     }
 
 

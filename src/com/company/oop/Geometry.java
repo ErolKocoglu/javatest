@@ -14,7 +14,7 @@ public class Geometry {
         for(int c=0; c<countOfCircle;c++){
             System.out.println((c+1) +". Dairenin yarıçapını girin");
             int radius=tara.nextInt();
-
+            circles[c].setRadius(radius);
             circles[c]=new Circle(radius);
         }
         this.circles=circles;
@@ -49,6 +49,7 @@ public class Geometry {
         for(int s=0;s<countOfSquare;s++){
             System.out.println((s+1) +". Karenin kenarını girin.");
             int edgeLength=tara.nextInt();
+            squares[s].setEdgeLength(edgeLength);
             squares[s]=new Square(edgeLength);
         }
         this.squares=squares;
