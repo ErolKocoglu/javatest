@@ -78,7 +78,8 @@ public class OopTest {
             OopTest newObject=new OopTest();
             while(myReader.hasNextLine()){
                 String email=myReader.nextLine();
-                System.out.println(myReader.nextLine() +newObject.isValid(email));
+                System.out.println(email +newObject.isValid(email));
+
 
             }
             myReader.close();
@@ -94,7 +95,7 @@ public class OopTest {
 
     public boolean isValid(String email){
         boolean valid;
-        if(email.contains("@")==true&&email.substring(0,email.indexOf("@")).isEmpty()==false&&email.substring(email.indexOf("@")).contains(".")==true&&email.substring(email.indexOf("@"),email.indexOf(".")).isEmpty()==false&&email.substring(email.indexOf("."),email.indexOf(".",email.indexOf("."))).isEmpty()==false){
+        if(email.contains("@")==true&&email.substring(0,email.indexOf("@")).isEmpty()==false&&email.substring(email.indexOf("@")).contains(".")==true&&email.substring(email.indexOf("@"),email.indexOf(".")).isEmpty()==false&&email.substring(email.indexOf("."),email.indexOf(".",email.indexOf(".")+1)).isEmpty()==false){
             valid=true;
         }else{
             valid=false;
