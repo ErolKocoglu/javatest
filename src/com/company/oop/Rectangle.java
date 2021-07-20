@@ -16,7 +16,7 @@ public class Rectangle {
     public int getLongEdge(){
         return longEdge;
     }
-    public void setLongEdge(){
+    public void setLongEdge(int longEdge){
         this.longEdge=longEdge;
     }
 }

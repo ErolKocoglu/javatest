@@ -57,7 +57,7 @@ public class Geometry {
         System.out.println("Girdiğiniz karelerin alanları: ");
         int[] areas=new int[squares.length];
         for(int sA=0;sA< squares.length;sA++){
-            int area=squares[sA].edgeLength*squares[sA].edgeLength;
+            int area=squares[sA].getEdgeLength()*squares[sA].getEdgeLength();
             areas[sA]=area;
             System.out.println((sA+1) +". Karenin alanı: " +areas[sA]);
         }
@@ -66,7 +66,7 @@ public class Geometry {
         System.out.println("Girdiğiniz karelerin çevreleri: ");
         int[] circumferences= new int[squares.length];
         for(int sC=0; sC< squares.length; sC++){
-            int circumference= 4*squares[sC].edgeLength;
+            int circumference= 4*squares[sC].getEdgeLength();
             circumferences[sC]=circumference;
             System.out.println((sC+1) +". Karenin çevresi: " +circumferences[sC]);
         }
@@ -90,7 +90,7 @@ public class Geometry {
         System.out.println("Girdiğiniz dikdörtgenlerin alanları: ");
         int[] areas=new int[rectangles.length];
         for(int rA=0; rA< rectangles.length; rA++){
-            int area= rectangles[rA].longEdge*rectangles[rA].shortEdge;
+            int area= rectangles[rA].getLongEdge()*rectangles[rA].getShortEdge();
             areas[rA]=area;
             System.out.println((rA+1) +". Dikdörtgenin alanı: " +areas[rA]);
         }
@@ -99,7 +99,7 @@ public class Geometry {
         System.out.println("Girdiğiniz dikdörtgenlerin çevreleri: ");
         int[] circumferences=new int[rectangles.length];
         for(int rC=0; rC< rectangles.length; rC++){
-            int circumference= 2*(rectangles[rC].shortEdge + rectangles[rC].longEdge);
+            int circumference= 2*(rectangles[rC].getShortEdge() + rectangles[rC].getLongEdge());
             circumferences[rC]=circumference;
             System.out.println((rC+1) +". Dikdörtgenin çevresi: " +circumferences[rC]);
         }
