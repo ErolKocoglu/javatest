@@ -72,26 +72,48 @@ public class OopTest {
 //        geometry.calculateAreaOfRectangle();
 //        geometry.calculateCircumferenceOfRectangle();
 //        System.out.println("My first git test");
-        System.out.println("Yarıçapı girin");
+//        System.out.println("Yarıçapı girin");
+//        Scanner tara=new Scanner(System.in);
+//        int radius= tara.nextInt();
+//        Circle circle=new Circle(radius);
+//        circle.printArea();
+//        circle.printCircumference();
 
 
-        try {
-            File myFile = new File("C:\\Users\\HP\\IdeaProjects\\untitled2\\src\\com\\company\\oop\\deneme.txt");
-            Scanner myReader = new Scanner(myFile);
-            EmailChecker newObject=new EmailChecker();
-            while (myReader.hasNextLine()) {
-                String email = myReader.nextLine();
-                System.out.println(email +newObject.isValid(email));
+//        try {
+//            File myFile = new File("C:\\Users\\HP\\IdeaProjects\\untitled2\\src\\com\\company\\oop\\deneme.txt");
+//            Scanner myReader = new Scanner(myFile);
+//            EmailChecker newObject=new EmailChecker();
+//            while (myReader.hasNextLine()) {
+//                String email = myReader.nextLine();
+//                System.out.println(email +newObject.isValid(email));
+//
+//
+//
+//            }
+//            myReader.close();
+//        } catch (FileNotFoundException e) {
+//            System.out.println("Hata meydana geldi");
+//            e.printStackTrace();
+//        }
+//        Circle circle=new Circle(4);
+//        double area= circle.getArea();
+//        System.out.println(area);
+//        circle.setRadius(8);
+//        System.out.println(circle.getArea());
 
+        //
 
+//        System.out.println("Ahmet said :\"Deniz is a bad person\"");
+//        System.out.println("\\");
+//        System.out.println("1\n 2\n 3");
+//        System.out.println("Erol\tDeniz");
+        //            File myFile = new File("C:\\Users\\HP\\IdeaProjects\\untitled2\\src\\com\\company\\oop\\deneme.txt");
 
-            }
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Hata meydana geldi");
-            e.printStackTrace();
-        }
-
+        Circle circle=new Circle(2);
+        System.out.println(circle.getArea());
+        circle.setRadius(5);
+        circle.printArea();
 
     }
 

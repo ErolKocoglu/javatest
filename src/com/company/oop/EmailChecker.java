@@ -21,12 +21,12 @@ public class EmailChecker {
         }
 
 
-        if (hasAtSymbol && beforeAtEmpty == false && pointAfterAt==true && betweenAtAndPointEmpty == false && afterPointEmpty==false) {
+        if (hasAtSymbol && !beforeAtEmpty && pointAfterAt && !betweenAtAndPointEmpty && !afterPointEmpty) {
             if(countOfPointAfterAt==1){
                 valid=true;
             }else{
                 boolean betweenTwoPointEmpty=email.substring(email.indexOf("."), email.indexOf(".", email.indexOf(".") )).isEmpty();
-                if(betweenTwoPointEmpty==false){
+                if(!betweenTwoPointEmpty){
                     valid=true;
                 }else{
                     valid=false;
