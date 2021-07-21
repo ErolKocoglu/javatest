@@ -72,6 +72,9 @@ public class OopTest {
 //        geometry.calculateAreaOfRectangle();
 //        geometry.calculateCircumferenceOfRectangle();
 //        System.out.println("My first git test");
+        System.out.println("Yarıçapı girin");
+
+
         try {
             File myFile = new File("C:\\Users\\HP\\IdeaProjects\\untitled2\\src\\com\\company\\oop\\deneme.txt");
             Scanner myReader = new Scanner(myFile);
