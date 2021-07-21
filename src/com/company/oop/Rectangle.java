@@ -7,6 +7,22 @@ public class Rectangle {
         this.shortEdge=shortEdge;
         this.longEdge=longEdge;
     }
+
+    public int getCircumference(){
+        return 2*(shortEdge+longEdge);
+    }
+
+    public void printCircumference(){
+        System.out.println("Dikdörtgenin çevresi: " +getCircumference());
+    }
+
+    public int getArea(){
+        return longEdge*shortEdge;
+    }
+
+    public void printArea(){
+        System.out.println("Dikdörtgenin alanı: " +getArea());
+    }
     public int getShortEdge(){
         return shortEdge;
     }

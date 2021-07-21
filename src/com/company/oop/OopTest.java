@@ -115,6 +115,14 @@ public class OopTest {
         circle.setRadius(5);
         circle.printArea();
 
+        Rectangle rectangle=new Rectangle(3,5);
+        rectangle.printArea();
+        rectangle.printCircumference();
+
+        Square square= new Square(4);
+        square.printArea();
+        square.printCircumference();
+
     }
 
 
