@@ -24,4 +24,5 @@ public class Organisation {
     public void setAddress(String address){
         this.address=address;
     }
+
 }

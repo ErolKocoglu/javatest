@@ -123,6 +123,15 @@ public class OopTest {
         square.printArea();
         square.printCircumference();
 
+
+        Organisation organisation=new Organisation("Kurum","Malatya");
+
+        Officer officer=new Officer("Erol","Koçoğlu","12.03.2002","Malatya",organisation.getName(),organisation.getAddress());
+
+        StudentNew studentNew= new StudentNew("Ahmet","Yılmaz","01.01.1990","İstanbul",123456789,90.50,"12/A");
+
+        Tourist tourist=new Tourist("John","Smith","UK");
+
     }
 
 
