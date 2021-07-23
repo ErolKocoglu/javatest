@@ -6,6 +6,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.SQLOutput;
+import java.util.Date;
 import java.util.Scanner;
 
 public class OopTest {
@@ -110,24 +112,55 @@ public class OopTest {
 //        System.out.println("Erol\tDeniz");
         //            File myFile = new File("C:\\Users\\HP\\IdeaProjects\\untitled2\\src\\com\\company\\oop\\deneme.txt");
 
-        Circle circle=new Circle(2);
-        System.out.println(circle.getArea());
-        circle.setRadius(5);
-        circle.printArea();
-
-        Rectangle rectangle=new Rectangle(3,5);
-        rectangle.printArea();
-        rectangle.printCircumference();
-
-        Square square= new Square(4);
-        square.printArea();
-        square.printCircumference();
+//        Circle circle=new Circle(2);
+//        System.out.println(circle.getArea());
+//        circle.setRadius(5);
+//        circle.printArea();
+//
+//        Rectangle rectangle=new Rectangle(3,5);
+//        rectangle.printArea();
+//        rectangle.printCircumference();
+//
+//        Square square= new Square(4);
+//        square.printArea();
+//        square.printCircumference();
 
 
         Organisation organisation=new Organisation("Kurum","Malatya");
+        int age=25;
+        Officer officer=new Officer("Erol","Koçoğlu",new Date(2002,3,12),"Malatya", organisation, age );
+        System.out.println("The birth date of Erol: " +officer.getBirthDate());
 
-        Officer officer=new Officer("Erol","Koçoğlu","12.03.2002","Malatya",organisation.getName(),organisation.getAddress());
+        officer.getBirthDate().setDate(11);
+        Date date1= officer.getBirthDate();
+        officer.setBirthDate(new Date(2005,1,23));
+        Date date2= officer.getBirthDate();
+        date1.setMonth(3);
+        date2.setMonth(9);
+        officer.setBirthDate(date1);
+        date2.setYear(1991);
+        date1.setYear(1945);
+        officer.getBirthDate().setYear(1988);
+        date2.setDate(13);
 
+        System.out.println(date1);
+        System.out.println(date2);
+
+        System.out.println("The birth date of Erol: " +officer.getBirthDate());
+
+
+
+        organisation.setName("Jandarma");
+        officer.setOrganisation(new Organisation("Kaymakamlık","İlçe merkezi"));
+        officer.getOrganisation().setName("Belediye");
+        officer.getOrganisation().setAddress("Şehir merkezi");
+
+        Organisation secondOrganisation=officer.getOrganisation();
+        secondOrganisation.setName("Belediye");
+        secondOrganisation.setAddress("Şehir merkezi");
+
+        officer.setAge(45);
+            age=45;
         StudentNew studentNew= new StudentNew("Ahmet","Yılmaz","01.01.1990","İstanbul",123456789,90.50,"12/A");
 
         Tourist tourist=new Tourist("John","Smith","UK");

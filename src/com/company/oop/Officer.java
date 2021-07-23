@@ -1,20 +1,38 @@
 package com.company.oop;
 
+import java.util.Date;
+
 public class Officer {
     private String name;
     private String surname;
-    private String birthDate;
+    private Date birthDate;
     private String birthPlace;
-    private String orgName;
-    private String orgAddress;
+    private Organisation organisation;
+    private int age;
 
-    public Officer(String name, String surname, String birthDate, String birthPlace, String orgName, String orgAddress){
+    public Officer(String name, String surname, Date birthDate, String birthPlace, Organisation organisation, int age){
         this.name=name;
         this.surname=surname;
         this.birthDate=birthDate;
         this.birthPlace=birthPlace;
-        this.orgName=orgName;
-        this.orgAddress=orgAddress;
+        this.organisation=organisation;
+        this.age=age;
+    }
+
+    public void setAge(int age){
+        this.age=age;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public void setOrganisation(Organisation organisation){
+        this.organisation=organisation;
+    }
+
+    public Organisation getOrganisation(){
+        return organisation;
     }
 
     public String getName() {
@@ -33,11 +51,11 @@ public class Officer {
         this.surname=surname;
     }
 
-    public String getBirthDate(){
+    public Date getBirthDate(){
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate){
+    public void setBirthDate(Date birthDate){
         this.birthDate=birthDate;
     }
 
@@ -49,20 +67,5 @@ public class Officer {
         this.birthPlace=birthPlace;
     }
 
-    public String getOrgName(){
-        return orgName;
-    }
-
-    public void setOrgName(String orgName){
-        this.orgName=orgName;
-    }
-
-    public String getOrgAddress(){
-        return orgAddress;
-    }
-
-    public void setOrgAddress(String orgAddress){
-        this.orgAddress=orgAddress;
-    }
 
 }
