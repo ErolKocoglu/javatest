@@ -11,6 +11,8 @@ public class Tourist {
         this.country=country;
     }
 
+
+
     public String getName(){
         return name;
     }

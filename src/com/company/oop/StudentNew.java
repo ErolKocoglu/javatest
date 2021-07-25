@@ -1,15 +1,17 @@
 package com.company.oop;
 
+import java.util.Date;
+
 public class StudentNew {
     private String name;
     private String surname;
-    private String birthDate;
+    private Date birthDate;
     private String birthPlace;
     private int id;
     private double averagePoint;
     private String clazz;
 
-    public StudentNew(String name, String surname, String birthDate, String birthPlace, int id, double averagePoint, String clazz){
+    public StudentNew(String name, String surname, Date birthDate, String birthPlace, int id, double averagePoint, String clazz){
         this.name=name;
         this.surname=surname;
         this.birthDate=birthDate;
@@ -35,11 +37,11 @@ public class StudentNew {
         this.surname=surname;
     }
 
-    public String getBirthDate(){
+    public Date getBirthDate(){
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate){
+    public void setBirthDate(Date birthDate){
         this.birthDate=birthDate;
     }
 

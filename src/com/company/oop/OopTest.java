@@ -150,6 +150,11 @@ public class OopTest {
 
 
 
+
+
+
+
+
         organisation.setName("Jandarma");
         officer.setOrganisation(new Organisation("Kaymakamlık","İlçe merkezi"));
         officer.getOrganisation().setName("Belediye");
@@ -161,7 +166,7 @@ public class OopTest {
 
         officer.setAge(45);
             age=45;
-        StudentNew studentNew= new StudentNew("Ahmet","Yılmaz","01.01.1990","İstanbul",123456789,90.50,"12/A");
+        StudentNew studentNew= new StudentNew("Ahmet","Yılmaz",new Date(),"İstanbul",123456789,90.50,"12/A");
 
         Tourist tourist=new Tourist("John","Smith","UK");
 
