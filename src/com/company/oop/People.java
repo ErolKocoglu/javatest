@@ -2,7 +2,6 @@ package com.company.oop;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Date;
 import java.util.Scanner;
 
 public class People {
@@ -18,7 +17,8 @@ public class People {
                 int o=0;
                 int t=0;
                 while(myReader.hasNextLine()){
-                    String personStatus=person.substring(0,1);
+                    String person1=myReader.nextLine();
+                    String personStatus=person1.substring(0,1);
                     if(personStatus.equals("t")||personStatus.equals("T")){
                         t++;
                     }else if(personStatus.equals("s")||personStatus.equals("S")){
@@ -27,12 +27,14 @@ public class People {
                         o++;
                     }
                 }
+                people.peopleChecker(person,s,o,t);
 
-            }
+            }myReader.close();
         } catch (FileNotFoundException e){
             System.out.println("Hata!");
             e.printStackTrace();
         }
+
 
 
     }
