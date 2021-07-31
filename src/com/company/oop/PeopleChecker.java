@@ -14,26 +14,42 @@ public class PeopleChecker {
 
         if(personStatus.equals("t")|| personStatus.equals("T")){
             String[] spaces=person.split(" ");
-            String name=person.substring(2,person.indexOf(spaces[1]));
-            String surname=person.substring(person.indexOf(spaces[1])+1,person.indexOf(spaces[2]));
-            String country=person.substring(person.indexOf(spaces[2])+1);
+            String name=spaces[1];
+            String surname=spaces[2];
+            String country=spaces[3];
             tourists[t1]=new Tourist(name,surname,country);
             t1++;
         }else if(personStatus.equals("s")||personStatus.equals("S")){
             String[] spaces=person.split(" ");
-            String[] dashes=person.split("-");
-            String name=person.substring(2,person.indexOf(spaces[1]));
-            String surname=person.substring(person.indexOf(spaces[1])+1,person.indexOf(spaces[2]));
-            int day=Integer.parseInt(person.substring(person.indexOf(spaces[2])+1,person.indexOf(dashes[0])));
-            int month=Integer.parseInt(person.substring(person.indexOf(dashes[0])+1,person.indexOf(dashes[1])));
-            int year=Integer.parseInt(person.substring(person.indexOf(dashes[1])+1,person.indexOf(spaces[3])));
-            Date birthDate= new Date(year,month,day);
-            String birthPlace=person.substring(person.indexOf(spaces[3])+1,person.indexOf(spaces[4]));
-            int id=Integer.parseInt(person.substring(person.indexOf(spaces[4])+1,person.indexOf(spaces[5])));
-            double averagePoint=Double.parseDouble(person.substring(person.indexOf(spaces[5])+1,person.indexOf(spaces[6])));
-            String clazz=person.substring(person.indexOf(spaces[6])+1);
+            String[] dashes=spaces[3].split("-");
+            String name=spaces[1];
+            String surname=spaces[2];
+            int day=Integer.parseInt(dashes[0]);
+            int month=Integer.parseInt(dashes[1]);
+            int year=Integer.parseInt(dashes[2]);
+            Date birthDate= new Date(year-1900,month-1,day);
+            String birthPlace=spaces[4];
+            int id=Integer.parseInt(spaces[5]);
+            double averagePoint=Double.parseDouble(spaces[6]);
+            String clazz=spaces[7];
             studentNews[s1]=new StudentNew(name,surname,birthDate,birthPlace,id,averagePoint,clazz);
             s1++;
+        }else{
+            String[] spaces=person.split(" ");
+            String[] dashes=spaces[3].split("-");
+            String name=spaces[1];
+            String surname=spaces[2];
+            int day=Integer.parseInt(dashes[0]);
+            int month=Integer.parseInt(dashes[1]);
+            int year=Integer.parseInt(dashes[2]);
+            Date birthDate= new Date(year-1900,month-1,day);
+            String birthPlace=spaces[4];
+            String orgName=spaces[5];
+            String orgAddress=spaces[6];
+            Organisation organisation=new Organisation(orgName,orgAddress);
+            int age=Integer.parseInt(spaces[7]);
+            officers[o1]=new Officer(name,surname,birthDate,birthPlace,organisation,age);
+            o1++;
         }
 
     }
