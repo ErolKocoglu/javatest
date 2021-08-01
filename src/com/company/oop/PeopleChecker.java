@@ -1,29 +1,25 @@
 package com.company.oop;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class PeopleChecker {
-    public int s1 = 0;
-    public int o1 = 0;
-    public int t1 = 0;
     private final String VALUE_SEPERATOR = ";";
     private final String DATE_SEPERATOR = "-";
 
-    public void peopleChecker(String person, int s, int o, int t) {
+    public void peopleChecker(String person) {
         String personStatus = person.substring(0, 1);
-        StudentNew[] studentNews = new StudentNew[s];
-        Officer[] officers = new Officer[o];
-        Tourist[] tourists = new Tourist[t];
+        ArrayList<StudentNew> studentNewList = new ArrayList<>();
+        ArrayList<Officer> officerArrayList = new ArrayList<>();
+        ArrayList<Tourist> touristArrayList = new ArrayList<>();
 
         if (personStatus.equals("t") || personStatus.equals("T")) {
-            tourists[t1++] = parseTouristFrom(person);
+            touristArrayList.add(parseTouristFrom(person));
         } else if (personStatus.equals("s") || personStatus.equals("S")) {
-            studentNews[s1++] = parseStudentFrom(person);
+            studentNewList.add(parseStudentFrom(person));
         } else {
-            officers[o1++] = parseOfficerFrom(person);
+            officerArrayList.add(parseOfficerFrom(person));
         }
-
-
     }
 
     private Date parseDate(String birthDate) {
