@@ -1,30 +1,12 @@
 package com.company.oop.people;
 
-public class Tourist {
-    private String name;
-    private String surname;
+public class Tourist extends Human {
     private String country;
 
     public Tourist(String name,String surname, String country){
-        this.name=name;
-        this.surname=surname;
+        super(name,surname);
         this.country=country;
-    }
 
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String name){
-        this.name=name;
-    }
-
-    public String getSurname(){
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getCountry(){
@@ -34,4 +16,5 @@ public class Tourist {
     public void setCountry(String country){
         this.country=country;
     }
+
 }
