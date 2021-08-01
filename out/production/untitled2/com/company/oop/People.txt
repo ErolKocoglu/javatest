@@ -1,25 +1,25 @@
-T hans bride german
-s umut kaya 23-12-2001 izmir 345126 75.10 4
-o kemal yılmaz 15-08-1985 istanbul polis ankara 36
-t jean reno france
-o cemal demir 10-05-1975 izmir okul konya 46
-t rafael nadal spain
-o sabri kara 17-10-1989 antalya hastane eskişehir 32
-t pablo escobar colombia
-s kemal koç 25-10-1999 adana 456321 84.56 5
-t jackie chan china
-t lev tolstoy russia
-s mert çelik 15-05-2000 ankara 654321 80.75 3
-t keanu reeves canada
-t al pacino italy
-o ahmet sunal 25-03-1995 malatya jandarma arapgir 25
-t mark souza brazil
-o mehmet kaya 12-02-1990 elazığ zabıta erzincan 31
-s erol koçoğlu 12-03-2002 malatya 123456 90.50 1
-s alper öztürk 13-09-1999 istanbul 234561 85.45 2
-t nikola tesla serbia
-s mehmet sarı 14-12-2000 antalya 162534 95.34 4
-s ahmet ateş 23-11-1998 sivas 341256 89.98 3
-t margaret thatcher england
-s ali yılmaz 25-10-2001 malatya 451623 90.90 1
-t ronald reagan america
+T;hans;bride;german
+s;umut;kaya;23-12-2001;izmir;345126;75.10;4
+o;kemal;yılmaz;15-08-1985;istanbul;polis;ankara;36
+t;jean;reno;france
+o;cemal;demir;10-05-1975;izmir;okul;konya;46
+t;rafael;nadal;spain
+o;sabri;kara;17-10-1989;antalya;hastane;eskişehir;32
+t;pablo;escobar;colombia
+s;kemal;koç;25-10-1999;adana;456321;84.56;5
+t;jackie;chan;china
+t;lev;tolstoy;russia
+s;mert;çelik;15-05-2000;ankara;654321;80.75;3
+t;keanu;reeves;canada
+t;al;pacino;italy
+o;ahmet;sunal;25-03-1995;malatya;jandarma;arapgir;25
+t;mark;souza;brazil
+o;mehmet;kaya;12-02-1990;elazığ;zabıta;erzincan;31
+s;erol;koçoğlu;12-03-2002;malatya;123456;90.50;1
+s;alper;öztürk;13-09-1999;istanbul;234561;85.45;2
+t;nikola;tesla;serbia
+s;mehmet;sarı;14-12-2000;antalya;162534;95.34;4
+s;ahmet;ateş;23-11-1998;sivas;341256;89.98;3
+t;margaret;thatcher;england
+s;ali;yılmaz;25-10-2001;malatya;451623;90.90;1
+t;ronald;reagan;america
