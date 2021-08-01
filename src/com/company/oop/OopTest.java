@@ -1,14 +1,10 @@
 package com.company.oop;
 
-import com.company.School;
+import com.company.oop.people.Officer;
+import com.company.oop.people.StudentNew;
+import com.company.oop.people.Tourist;
 
-import javax.swing.*;
-import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.sql.SQLOutput;
 import java.util.Date;
-import java.util.Scanner;
 
 public class OopTest {
     public static void main(String[] args) {

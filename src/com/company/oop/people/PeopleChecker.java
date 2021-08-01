@@ -1,4 +1,6 @@
-package com.company.oop;
+package com.company.oop.people;
+
+import com.company.oop.Organisation;
 
 import java.util.ArrayList;
 import java.util.Date;

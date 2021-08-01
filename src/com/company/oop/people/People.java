@@ -1,4 +1,4 @@
-package com.company.oop;
+package com.company.oop.people;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,7 +20,7 @@ public class People {
             System.out.println("Hata!");
             e.printStackTrace();
         }
-
+// input 1.t 2.name control contains
 
     }
 

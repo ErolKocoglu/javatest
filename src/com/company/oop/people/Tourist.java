@@ -1,4 +1,4 @@
-package com.company.oop;
+package com.company.oop.people;
 
 public class Tourist {
     private String name;
