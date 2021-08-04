@@ -8,6 +8,7 @@ public class Tourist extends Human {
         this.country=country;
 
     }
+    //vatandaş student officer
 
     public String getCountry(){
         return country;

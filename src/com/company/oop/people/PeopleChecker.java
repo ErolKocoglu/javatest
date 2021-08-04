@@ -4,24 +4,79 @@ import com.company.oop.Organisation;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class PeopleChecker {
     private final String VALUE_SEPERATOR = ";";
     private final String DATE_SEPERATOR = "-";
+    ArrayList<String> touristLine=new ArrayList<>();
+    ArrayList<String> studentLine=new ArrayList<>();
+    ArrayList<String> officerLine=new ArrayList<>();
+    ArrayList<StudentNew> studentNewList = new ArrayList<>();
+    ArrayList<Officer> officerArrayList = new ArrayList<>();
+    ArrayList<Tourist> touristArrayList = new ArrayList<>();
 
     public void peopleChecker(String person) {
         String personStatus = person.substring(0, 1);
-        ArrayList<StudentNew> studentNewList = new ArrayList<>();
-        ArrayList<Officer> officerArrayList = new ArrayList<>();
-        ArrayList<Tourist> touristArrayList = new ArrayList<>();
+
 
         if (personStatus.equals("t") || personStatus.equals("T")) {
             touristArrayList.add(parseTouristFrom(person));
+            touristLine.add(person);
         } else if (personStatus.equals("s") || personStatus.equals("S")) {
             studentNewList.add(parseStudentFrom(person));
+            studentLine.add(person);
         } else {
             officerArrayList.add(parseOfficerFrom(person));
+            officerLine.add(person);
         }
+    }
+    public void peopleContainChecker(){
+        Scanner scan=new Scanner(System.in);
+        for(;;){
+            System.out.println("Sorgulamak istediğiniz kişiyi girin. Sorgulamadan çıkmak için çıkış yazın.");
+            String userInput=scan.nextLine();
+            if(userInput.equals("çıkış")){
+                break;
+            }
+            String personType=userInput.substring(0,1);
+            String name=userInput.split(" ")[1];
+            if(personType.equals("t")||personType.equals("T")){
+                int touristCount=0;
+                for(int i=0; i<touristArrayList.size();i++){
+                    if(name.equals(touristArrayList.get(i).getName())){
+                        System.out.println(touristLine.get(i));
+                        touristCount++;
+                    }
+                }
+                if(touristCount==0){
+                    System.out.println("Bu isimde bir turist yok!");
+                }
+            }else if(personType.equals("s")||personType.equals("S")){
+                int studentCount=0;
+                for(int i =0;i<studentNewList.size();i++){
+                    if(name.equals(studentNewList.get(i).getName())){
+                        System.out.println(studentLine.get(i));
+                        studentCount++;
+                    }
+                }
+                if(studentCount==0){
+                    System.out.println("Bu isimde bir öğrenci yok!");
+                }
+            }else{
+                int officerCount=0;
+                for(int i=0; i<officerArrayList.size(); i++){
+                    if(name.equals(officerArrayList.get(i).getName())){
+                        System.out.println(officerLine.get(i));
+                        officerCount++;
+                    }
+                }
+                if(officerCount==0){
+                    System.out.println("Sistemde böyle bir memur yok!");
+                }
+            }
+        }
+
     }
 
     private Date parseDate(String birthDate) {

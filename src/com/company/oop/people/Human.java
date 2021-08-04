@@ -1,8 +1,9 @@
 package com.company.oop.people;
 
-public class Human {
-    private String name;
+public class Human  {
+    protected String name;
     private String surname;
+
 
     public Human(String name, String surname){
         this.name=name;
