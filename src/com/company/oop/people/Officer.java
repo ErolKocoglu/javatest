@@ -4,69 +4,34 @@ import com.company.oop.Organisation;
 
 import java.util.Date;
 
-public class Officer {
-    private String name;
-    private String surname;
-    private Date birthDate;
-    private String birthPlace;
+public class Officer extends Citizen {
     private Organisation organisation;
     private int age;
 
-    public Officer(String name, String surname, Date birthDate, String birthPlace, Organisation organisation, int age){
-        this.name=name;
-        this.surname=surname;
-        this.birthDate=birthDate;
-        this.birthPlace=birthPlace;
-        this.organisation=organisation;
-        this.age=age;
+    public Officer(String name, String surname, Date birthDate, String birthPlace, Organisation organisation, int age, int id) {
+        super(name, surname, id, birthDate, birthPlace);
+        this.organisation = organisation;
+        this.age = age;
     }
 
-    public void setAge(int age){
-        this.age=age;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
-    public void setOrganisation(Organisation organisation){
-        this.organisation=organisation;
+    public void setOrganisation(Organisation organisation) {
+        this.organisation = organisation;
     }
 
-    public Organisation getOrganisation(){
+    public Organisation getOrganisation() {
         return organisation;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname(){
-        return surname;
-    }
-
-    public void setSurname(String surname){
-        this.surname=surname;
-    }
-
-    public Date getBirthDate(){
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate){
-        this.birthDate=birthDate;
-    }
-
-    public String getBirthPlace(){
-        return birthPlace;
-    }
-
-    public void setBirthPlace(String birthPlace){
-        this.birthPlace=birthPlace;
+    public String toString() {
+        return getName() + " " + getSurname() + " " + getBirthDate() + " " + getBirthPlace() + " " + getOrganisation().getName() +" " +getOrganisation().getAddress() + " " + getAge() + " " + getId();
     }
 
 

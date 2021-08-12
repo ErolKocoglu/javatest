@@ -124,7 +124,7 @@ public class OopTest {
 
         Organisation organisation=new Organisation("Kurum","Malatya");
         int age=25;
-        Officer officer=new Officer("Erol","Koçoğlu",new Date(2002,3,12),"Malatya", organisation, age );
+        Officer officer=new Officer("Erol","Koçoğlu",new Date(2002,3,12),"Malatya", organisation, age,123456 );
         System.out.println("The birth date of Erol: " +officer.getBirthDate());
 
         officer.getBirthDate().setDate(11);

@@ -1,7 +1,7 @@
 package com.company.oop.people;
 
 public class Human  {
-    protected String name;
+    private String name;
     private String surname;
 
 

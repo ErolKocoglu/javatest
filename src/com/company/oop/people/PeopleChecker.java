@@ -9,9 +9,6 @@ import java.util.Scanner;
 public class PeopleChecker {
     private final String VALUE_SEPERATOR = ";";
     private final String DATE_SEPERATOR = "-";
-    ArrayList<String> touristLine=new ArrayList<>();
-    ArrayList<String> studentLine=new ArrayList<>();
-    ArrayList<String> officerLine=new ArrayList<>();
     ArrayList<StudentNew> studentNewList = new ArrayList<>();
     ArrayList<Officer> officerArrayList = new ArrayList<>();
     ArrayList<Tourist> touristArrayList = new ArrayList<>();
@@ -22,13 +19,10 @@ public class PeopleChecker {
 
         if (personStatus.equals("t") || personStatus.equals("T")) {
             touristArrayList.add(parseTouristFrom(person));
-            touristLine.add(person);
         } else if (personStatus.equals("s") || personStatus.equals("S")) {
             studentNewList.add(parseStudentFrom(person));
-            studentLine.add(person);
         } else {
             officerArrayList.add(parseOfficerFrom(person));
-            officerLine.add(person);
         }
     }
     public void peopleContainChecker(){
@@ -42,36 +36,40 @@ public class PeopleChecker {
             String personType=userInput.substring(0,1);
             String name=userInput.split(" ")[1];
             if(personType.equals("t")||personType.equals("T")){
-                int touristCount=0;
+                boolean touristExist=false;
                 for(int i=0; i<touristArrayList.size();i++){
-                    if(name.equals(touristArrayList.get(i).getName())){
-                        System.out.println(touristLine.get(i));
-                        touristCount++;
+                    Tourist tourist=touristArrayList.get(i);
+                    if(name.equals(tourist.getName())){
+                        System.out.println(tourist);
+                        touristExist=true;
                     }
                 }
-                if(touristCount==0){
+                if(!touristExist){
                     System.out.println("Bu isimde bir turist yok!");
                 }
             }else if(personType.equals("s")||personType.equals("S")){
-                int studentCount=0;
+                boolean studentExist=false;
                 for(int i =0;i<studentNewList.size();i++){
-                    if(name.equals(studentNewList.get(i).getName())){
-                        System.out.println(studentLine.get(i));
-                        studentCount++;
+
+                    StudentNew studentNew = studentNewList.get(i);
+                    if(name.equals(studentNew.getName())){
+                        System.out.println(studentNew);
+                        studentExist=true;
                     }
                 }
-                if(studentCount==0){
+                if(!studentExist){
                     System.out.println("Bu isimde bir öğrenci yok!");
                 }
             }else{
-                int officerCount=0;
+                boolean officerExist=false;
                 for(int i=0; i<officerArrayList.size(); i++){
-                    if(name.equals(officerArrayList.get(i).getName())){
-                        System.out.println(officerLine.get(i));
-                        officerCount++;
+                    Officer officer=officerArrayList.get(i);
+                    if(name.equals(officer.getName())){
+                        System.out.println(officer);
+                        officerExist=true;
                     }
                 }
-                if(officerCount==0){
+                if(!officerExist){
                     System.out.println("Sistemde böyle bir memur yok!");
                 }
             }
@@ -117,6 +115,7 @@ public class PeopleChecker {
         String orgAddress = spaces[6];
         Organisation organisation = new Organisation(orgName, orgAddress);
         int age = Integer.parseInt(spaces[7]);
-        return new Officer(name, surname, parseDate(spaces[3]), birthPlace, organisation, age);
+        int id=Integer.parseInt(spaces[8]);
+        return new Officer(name, surname, parseDate(spaces[3]), birthPlace, organisation, age,id);
     }
 }
