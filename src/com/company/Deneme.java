@@ -23,7 +23,6 @@ public class Deneme {
         double boyunKaresi = Math.pow(cmToMetre,2);
         endeks = kilo / boyunKaresi;
         System.out.println("Vücut kitle endeksiniz:" +endeks);*/
-
         Scanner tara = new Scanner(System.in);
         System.out.println("Lütfen tahmininizi girin");
         int SansliSayi = (int)(Math.random() * 90 + 10);

@@ -2,6 +2,7 @@ package com.company.oop.people;
 
 public class Tourist extends Human {
     private String country;
+    private long id;
 
     public Tourist(String name,String surname, String country){
         super(name,surname);

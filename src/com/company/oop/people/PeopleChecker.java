@@ -13,6 +13,11 @@ public class PeopleChecker {
     ArrayList<Officer> officerArrayList = new ArrayList<>();
     ArrayList<Tourist> touristArrayList = new ArrayList<>();
 
+    public ArrayList getTouristArray() {
+        return touristArrayList;
+    }
+
+
     public void peopleChecker(String person) {
         String personStatus = person.substring(0, 1);
 
@@ -25,56 +30,61 @@ public class PeopleChecker {
             officerArrayList.add(parseOfficerFrom(person));
         }
     }
-    public void peopleContainChecker(){
-        Scanner scan=new Scanner(System.in);
-        for(;;){
+
+    public void peopleContainChecker() {
+        Scanner scan = new Scanner(System.in);
+        for (; ; ) {
             System.out.println("Sorgulamak istediğiniz kişiyi girin. Sorgulamadan çıkmak için çıkış yazın.");
-            String userInput=scan.nextLine();
-            if(userInput.equals("çıkış")){
+            String userInput = scan.nextLine();
+            if (userInput.equals("çıkış")) {
                 break;
             }
-            String personType=userInput.substring(0,1);
-            String name=userInput.split(" ")[1];
-            if(personType.equals("t")||personType.equals("T")){
-                boolean touristExist=false;
-                for(int i=0; i<touristArrayList.size();i++){
-                    Tourist tourist=touristArrayList.get(i);
-                    if(name.equals(tourist.getName())){
+            String personType = userInput.substring(0, 1);
+            String name = userInput.split(" ")[1];
+            if (personType.equals("t") || personType.equals("T")) {
+                boolean touristExist = false;
+                for (int i = 0; i < touristArrayList.size(); i++) {
+                    Tourist tourist = touristArrayList.get(i);
+                    if (name.equals(tourist.getName())) {
                         System.out.println(tourist);
-                        touristExist=true;
+                        touristExist = true;
                     }
                 }
-                if(!touristExist){
+                if (!touristExist) {
                     System.out.println("Bu isimde bir turist yok!");
                 }
-            }else if(personType.equals("s")||personType.equals("S")){
-                boolean studentExist=false;
-                for(int i =0;i<studentNewList.size();i++){
+            } else if (personType.equals("s") || personType.equals("S")) {
+                boolean studentExist = false;
+                for (int i = 0; i < studentNewList.size(); i++) {
 
                     StudentNew studentNew = studentNewList.get(i);
-                    if(name.equals(studentNew.getName())){
+                    if (name.equals(studentNew.getName())) {
                         System.out.println(studentNew);
-                        studentExist=true;
+                        studentExist = true;
                     }
                 }
-                if(!studentExist){
+                if (!studentExist) {
                     System.out.println("Bu isimde bir öğrenci yok!");
                 }
-            }else{
-                boolean officerExist=false;
-                for(int i=0; i<officerArrayList.size(); i++){
-                    Officer officer=officerArrayList.get(i);
-                    if(name.equals(officer.getName())){
+            } else {
+                boolean officerExist = false;
+                for (int i = 0; i < officerArrayList.size(); i++) {
+                    Officer officer = officerArrayList.get(i);
+                    if (name.equals(officer.getName())) {
                         System.out.println(officer);
-                        officerExist=true;
+                        officerExist = true;
                     }
                 }
-                if(!officerExist){
+                if (!officerExist) {
                     System.out.println("Sistemde böyle bir memur yok!");
                 }
             }
         }
 
+    }
+
+    public String toStringTourist(int i) {
+        return touristArrayList.get(i).getName() + " " + touristArrayList.get(i).getSurname() + " " + touristArrayList.get(i).getCountry();
     }
 
     private Date parseDate(String birthDate) {
@@ -115,7 +125,7 @@ public class PeopleChecker {
         String orgAddress = spaces[6];
         Organisation organisation = new Organisation(orgName, orgAddress);
         int age = Integer.parseInt(spaces[7]);
-        int id=Integer.parseInt(spaces[8]);
-        return new Officer(name, surname, parseDate(spaces[3]), birthPlace, organisation, age,id);
+        int id = Integer.parseInt(spaces[8]);
+        return new Officer(name, surname, parseDate(spaces[3]), birthPlace, organisation, age, id);
     }
 }
