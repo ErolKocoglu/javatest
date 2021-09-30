@@ -4,9 +4,10 @@ public class Tourist extends Human {
     private String country;
     private long id;
 
-    public Tourist(String name,String surname, String country){
+    public Tourist(String name,String surname, String country, long id){
         super(name,surname);
         this.country=country;
+        this.id=id;
 
     }
     //vatandaş student officer

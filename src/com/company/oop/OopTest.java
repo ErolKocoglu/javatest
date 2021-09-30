@@ -164,7 +164,7 @@ public class OopTest {
             age=45;
         StudentNew studentNew= new StudentNew("Ahmet","Yılmaz",new Date(),"İstanbul",123456789,90.50,"12/A");
 
-        Tourist tourist=new Tourist("John","Smith","UK");
+        //Tourist tourist=new Tourist("John","Smith","UK");
 
     }
 

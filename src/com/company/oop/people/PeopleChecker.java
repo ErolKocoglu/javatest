@@ -100,7 +100,8 @@ public class PeopleChecker {
         String name = spaces[1];
         String surname = spaces[2];
         String country = spaces[3];
-        return new Tourist(name, surname, country);
+        long id=Long.parseLong(spaces[4]);
+        return new Tourist(name, surname, country,id);
 
     }
 
