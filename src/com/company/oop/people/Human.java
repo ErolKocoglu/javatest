@@ -4,7 +4,7 @@ public class Human  {
     private String name;
     private String surname;
 
-
+    //Create constructor
     public Human(String name, String surname){
         this.name=name;
         this.surname=surname;
