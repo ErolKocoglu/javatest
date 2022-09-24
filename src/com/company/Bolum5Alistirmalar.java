@@ -152,6 +152,20 @@ public class Bolum5Alistirmalar {
 
         }
 
+        //Çözüm 12
+        int multiplication=1;
+        int input;
+
+        System.out.println("Sayı girin: ");
+        input=tara.nextInt();
+
+        while(input!=0){
+            multiplication*=input;
+            System.out.println("Sayı girin");
+            input=tara.nextInt();
+        }
+        System.out.println("Girdiğiniz sayıların çarpımı: "+multiplication);
+
 
 
 
