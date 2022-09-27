@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
+// Udemy Sıfırdan Zirveye Adım Adım Bol Uygulamalı Java Kursu Section 5 Çözümleri
 
 public class Bolum5Alistirmalar {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class Bolum5Alistirmalar {
         int sayi3 = tara.nextInt();
         System.out.println("Girdiğiniz sayıların ortalaması: ");
         double ortalama = (sayi1 + sayi2 + sayi3) / 3.0;
-        System.out.printf("%.2f", ortalama );
+        System.out.printf("%.2f", ortalama);
 
         //Çözüm 2
         System.out.println("\n1. kenarı girin");
@@ -23,11 +24,11 @@ public class Bolum5Alistirmalar {
         int kenar2 = tara.nextInt();
         System.out.println("3. kenarı girin");
         int kenar3 = tara.nextInt();
-        if( (kenar1==kenar2) && (kenar1==kenar3)){
+        if ((kenar1 == kenar2) && (kenar1 == kenar3)) {
             System.out.println("Bu bir eşkenar üçgendir");
-        }else if( (kenar1!=kenar2)&&(kenar1!=kenar3)&&(kenar2!=kenar3)){
+        } else if ((kenar1 != kenar2) && (kenar1 != kenar3) && (kenar2 != kenar3)) {
             System.out.println("Bu bir çeşitkenar üçgendir");
-        }else{
+        } else {
             System.out.println("Bu bir ikizkenar üçgendir");
         }
 
@@ -36,16 +37,16 @@ public class Bolum5Alistirmalar {
         int vizeNotu = tara.nextInt();
         System.out.println("Final notunuzu giriniz");
         int finalNotu = tara.nextInt();
-        double gecmeNotu = (double)(vizeNotu*40/100) + (finalNotu*60/100);
+        double gecmeNotu = (double) (vizeNotu * 40 / 100) + (finalNotu * 60 / 100);
         System.out.println("Geçme notunuz:" + gecmeNotu);
-        if(gecmeNotu>=50){
+        if (gecmeNotu >= 50) {
             System.out.println("Tebrikler dersi geçtiniz");
-        }else{
+        } else {
             System.out.println("Maalesef dersi geçemediniz");
         }
 
         //Çözüm 4
-        for(int i =0; i<5; i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println("Erol");
         }
 
@@ -55,52 +56,52 @@ public class Bolum5Alistirmalar {
         int altSinir = tara.nextInt();
         System.out.println("Üst sınırı giriniz");
         int ustSinir = tara.nextInt();
-        for(int sayi =altSinir; sayi<ustSinir; sayi++){
-            toplam+=sayi;
+        for (int sayi = altSinir; sayi < ustSinir; sayi++) {
+            toplam += sayi;
         }
         System.out.println("Toplam:" + toplam);
 
         //Çözüm 6
-        for(int a =1; a<11; a++){
+        for (int a = 1; a < 11; a++) {
             System.out.print(a);
-            if(a!=10){
+            if (a != 10) {
                 System.out.print(",");
             }
         }
         //Çözüm 7
-        int faktoriyel=1;
+        int faktoriyel = 1;
         System.out.println("\nHangi sayının faktöriyelini almak istiyorsunuz?");
-        int istenenSayi=tara.nextInt();
-        for(int basSayi=1; basSayi<=istenenSayi; basSayi++){
-            faktoriyel*=basSayi;
+        int istenenSayi = tara.nextInt();
+        for (int basSayi = 1; basSayi <= istenenSayi; basSayi++) {
+            faktoriyel *= basSayi;
         }
         System.out.println(istenenSayi + " sayısının faktöriyeli:" + faktoriyel);
 
         //Çözüm 8
         System.out.println("x sayısını giriniz");
-        int x =tara.nextInt();
+        int x = tara.nextInt();
         System.out.println("y sayısını giriniz");
-        int y =tara.nextInt();
-        int fonksiyon=0;
-        if(x>0 && y<0){
-            fonksiyon= 4*x + 2*y +4;
+        int y = tara.nextInt();
+        int fonksiyon = 0;
+        if (x > 0 && y < 0) {
+            fonksiyon = 4 * x + 2 * y + 4;
             System.out.println("fonksiyonun değeri: " + fonksiyon);
-        }else if(x>0 && y==0){
-            fonksiyon= 2*x -y +3;
+        } else if (x > 0 && y == 0) {
+            fonksiyon = 2 * x - y + 3;
             System.out.println("fonksiyonun değeri: " + fonksiyon);
-        }else if(x<0 && y>0){
-            fonksiyon= 3*x +4*y +3;
+        } else if (x < 0 && y > 0) {
+            fonksiyon = 3 * x + 4 * y + 3;
             System.out.println("fonksiyonun değeri: " + fonksiyon);
         }
 
         //Çözüm 9
         System.out.println("Notunuzu giriniz");
-        int notDegeri= tara.nextInt();
-        int notAraligi=notDegeri/10;
-        if(notDegeri== 100){
-            notAraligi=9;
+        int notDegeri = tara.nextInt();
+        int notAraligi = notDegeri / 10;
+        if (notDegeri == 100) {
+            notAraligi = 9;
         }
-        switch (notAraligi){
+        switch (notAraligi) {
             case 9:
                 System.out.println("Notunuz AA");
                 break;
@@ -120,57 +121,68 @@ public class Bolum5Alistirmalar {
             case 5:
                 System.out.println("Notunuz CC");
                 break;
-                default:
-                    System.out.println("Notunuz CC'den düşük.");
+            default:
+                System.out.println("Notunuz CC'den düşük.");
 
 
         }
 
         //Çözüm 10
         System.out.println("Çarpım Tablosu");
-        for(int a =1; a<=10; a++){
-            for(int b=1; b<=10; b++){
-                System.out.println(a +"x" +b +"=" +(a*b) );
+        for (int a = 1; a <= 10; a++) {
+            for (int b = 1; b <= 10; b++) {
+                System.out.println(a + "x" + b + "=" + (a * b));
             }
         }
 
         //Çözüm 11
-        int uretilenSayi= (int)(Math.random()*99 +1);
-        int denemeSayisi=0;
+        int uretilenSayi = (int) (Math.random() * 99 + 1);
+        int denemeSayisi = 0;
         int tahmin = -1;
-        while(tahmin!=uretilenSayi){
+        while (tahmin != uretilenSayi) {
             System.out.println("Tahmininizi girin");
-            tahmin=tara.nextInt();
+            tahmin = tara.nextInt();
             denemeSayisi++;
-            if(tahmin==uretilenSayi){
-                System.out.println("Tebrikler " +denemeSayisi +". seferde doğru bildiniz.");
-            }else if(tahmin>uretilenSayi){
+            if (tahmin == uretilenSayi) {
+                System.out.println("Tebrikler " + denemeSayisi + ". seferde doğru bildiniz.");
+            } else if (tahmin > uretilenSayi) {
                 System.out.println("Yüksek girdiniz düşürün");
-            }else{
+            } else {
                 System.out.println("Düşük girdiniz yükseltin");
             }
 
         }
 
         //Çözüm 12
-        int multiplication=1;
+        int multiplication = 1;
         int input;
 
         System.out.println("Sayı girin: ");
-        input=tara.nextInt();
+        input = tara.nextInt();
 
-        while(input!=0){
-            multiplication*=input;
+        while (input != 0) {
+            multiplication *= input;
             System.out.println("Sayı girin");
-            input=tara.nextInt();
+            input = tara.nextInt();
         }
-        System.out.println("Girdiğiniz sayıların çarpımı: "+multiplication);
+        System.out.println("Girdiğiniz sayıların çarpımı: " + multiplication);
 
+        // Çözüm 13
+        int birinci_sayi;
+        int ikinci_sayi;
+        int ebob = 1;
+        System.out.println("Birinci sayıyı girin");
+        birinci_sayi = tara.nextInt();
+        System.out.println("İkinci sayıyı girin");
+        ikinci_sayi = tara.nextInt();
 
+        for (int i = 2; i <= Math.min(birinci_sayi, ikinci_sayi); i++) {
+            if (birinci_sayi % i == 0 && ikinci_sayi % i == 0) {
+                ebob = i;
+            }
+        }
 
-
-
-
+        System.out.println("Girdiğiniz sayıların ebobu: " + ebob);
 
 
     }
