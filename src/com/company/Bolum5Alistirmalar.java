@@ -184,6 +184,26 @@ public class Bolum5Alistirmalar {
 
         System.out.println("Girdiğiniz sayıların ebobu: " + ebob);
 
+        // Çözüm 14
+        String text="";
+        System.out.println("Metni girin");
+        text = tara.next();
+
+        boolean isPalindrome = true;
+
+        for (int i = 0; i < text.length() / 2; i++) {
+            if (text.charAt(i) != text.charAt(text.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome) {
+            System.out.println("Girdiğiniz " + text + " metni palindromdur.");
+        } else {
+            System.out.println("Girdiğiniz " + text + " metni palindrom değildir.");
+        }
+
 
     }
 }
