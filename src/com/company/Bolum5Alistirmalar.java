@@ -185,7 +185,7 @@ public class Bolum5Alistirmalar {
         System.out.println("Girdiğiniz sayıların ebobu: " + ebob);
 
         // Çözüm 14
-        String text="";
+        String text = "";
         System.out.println("Metni girin");
         text = tara.next();
 
@@ -202,6 +202,21 @@ public class Bolum5Alistirmalar {
             System.out.println("Girdiğiniz " + text + " metni palindromdur.");
         } else {
             System.out.println("Girdiğiniz " + text + " metni palindrom değildir.");
+        }
+
+        // Çözüm 15
+
+        int num;
+        System.out.println("Sayı girin");
+        num = tara.nextInt();
+
+
+        first:
+        for (int i = 2; i <= num; i++) {
+            for (int j = 2; j < i; j++) {
+                if(i%j==0) continue first;
+            }
+            System.out.print(i +" ");
         }
 
 
