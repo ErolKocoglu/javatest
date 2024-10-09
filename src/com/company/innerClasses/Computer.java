@@ -20,7 +20,6 @@ public class Computer {
         void sum(int var1, int var2) {
             System.out.println(var1 + var2);
         }
-
         void subtract(int var1, int var2) {
             System.out.println(var1 - var2);
         }
